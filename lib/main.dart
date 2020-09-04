@@ -39,15 +39,18 @@ class MyApp extends StatelessWidget {
                   color: Colors.tealAccent
                 ),
               ),
-              Container(
+              SizedBox(
+                width: 150.0,
+                height: 20.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(Icons.phone,color: Colors.teal),
-                    SizedBox(width: 10.0),
-                    Text(
+                child: ListTile(
+                  leading: Icon(Icons.phone,color: Colors.teal),
+                  title:Text(
                       '+91 987 654 3210',
                       style: TextStyle(
                         color: Colors.teal.shade900,
@@ -55,27 +58,21 @@ class MyApp extends StatelessWidget {
                         fontWeight: FontWeight.bold
                       ),
                     ),
-                  ],
                 ),
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0,horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(Icons.email,color: Colors.teal,),
-                    SizedBox(width: 10.0),
-                    Text(
-                      'flutter@gmail.com',
-                      style: TextStyle(
+                child: ListTile(
+                  leading: Icon(Icons.email,color: Colors.teal),
+                  title: Text(
+                    'ambuj@gmail.com',
+                    style: TextStyle(
                         color: Colors.teal.shade900,
                         fontFamily: 'SourceSansPro',
                         fontWeight: FontWeight.bold
-                      ),
                     ),
-                  ],
-                ),
+                  ),
+                )
               )
             ],
           )
